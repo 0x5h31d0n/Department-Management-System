@@ -54,4 +54,4 @@ We welcome contributions! Feel free to open issues and submit pull requests. Ple
 
 ### Credits
 
-This project was developed by [Sheldon Angelo Menezes](https://github.com/yourusername) and [Stalin Prevan Crasta](https://github.com/StalinPrevanCrasta).
+This project was developed by [Sheldon Angelo Menezes](https://github.com/0x5h31d0n) and [Stalin Prevan Crasta](https://github.com/StalinPrevanCrasta).
