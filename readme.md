@@ -6,17 +6,13 @@ The **Department Management System** is a web application built using the Django
 - **User Authentication**: Secure login and registration system for admins, department heads, and employees.
 - **Department Management**: Create, update, and delete department details.
 - **Employee Management**: Add, edit, and remove employee details. Each employee is associated with a department.
-- **Task Assignment**: Department heads can assign tasks to employees and track their progress.
-- **Role-based Access**: Different user roles (admin, department head, employee) have distinct permissions.
 - **Dashboard**: Interactive dashboards for admins and department heads to view department and employee statistics.
-- **Notifications**: System sends task notifications to employees.
 
 ## Technology Stack
 - **Backend**: Django (Python)
-- **Frontend**: HTML5, CSS3, Bootstrap (Optional: Tailwind CSS or any CSS framework)
+- **Frontend**: HTML5, CSS3
 - **Database**: SQLite (Default Django database, can be replaced with PostgreSQL or MySQL)
 - **Authentication**: Django’s built-in authentication system
-- **Deployment**: Docker (Optional), Gunicorn, Nginx
 
 ## Installation
 
