@@ -49,6 +49,9 @@ Make sure you have the following installed on your machine:
     ```bash
     python manage.py runserver
 
+### Contributing
+We welcome contributions! Feel free to open issues and submit pull requests. Please ensure that your code adheres to the project's coding standards.
+
 ### Credits
 
 This project was developed by [Sheldon Angelo Menezes](https://github.com/yourusername) and [Stalin Prevan Crasta](https://github.com/StalinPrevanCrasta).
