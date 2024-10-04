@@ -31,3 +31,24 @@ Make sure you have the following installed on your machine:
    ```bash
    git clone https://github.com/yourusername/department-management-system.git
    cd department-management-system
+
+2. Create a virtual environment:
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+
+3. Install the dependencies:
+    ```bash
+    pip install -r requirements.txt
+
+4. Apply migrations:
+    ```bash
+    python manage.py migrate
+
+5. Run the development server:
+    ```bash
+    python manage.py runserver
+
+### Credits
+
+This project was developed by [Sheldon Angelo Menezes](https://github.com/yourusername) and [Stalin Prevan Crasta](https://github.com/StalinPrevanCrasta).
