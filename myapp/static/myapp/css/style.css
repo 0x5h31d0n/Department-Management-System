@@ -1,0 +1,174 @@
+/* Mobile First CSS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #333;
+    color: white;
+}
+
+.top-name {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#logout {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+    background: #007BFF;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    
+}
+
+#logout:hover {
+    background: #0056b3;
+    ease-in-out: 0.5s;  
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.dept-name{
+    font-weight: 600;
+    font-size: 1em;
+    color: white;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #007BFF;
+}
+
+button {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+form {
+    margin: 20px 0;
+}
+
+form p {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 600px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 70%;
+    }
+
+    header {
+        text-align: left;
+        padding: 20px 0;
+    }
+}
+
+.dept-icon {
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -7px;
+}
+
+.form-icon{
+    width: 50px;
+    margin-bottom: -9px;
+}
+
+.warning{
+    background-color: red;
+}
+
+.button-space {
+    display: flex;
+    padding: 20px;
+    gap: 100px;
+}
+
+.logo{
+    width: 190px;
+    height: 180px;
+    display: block;
+    margin: 0 auto;
+}
+
+.create{
+    display: flex;
+    padding: 10px;
+    gap: 40px;
+}
+
+#back{
+    width: 100px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #007BFF;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}

@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Department List</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1 class="top-name"><img src="{% static 'myapp/icons/dept.png' %}" alt="Icon 1" class="dept-icon">&nbsp;Department List</h1>
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Logout" id="logout">
+    </form>
+    </header>
+    <img src="{% static 'myapp/icons/logo.png' %}" alt="logo" class="logo">
+    <div class="container">
+        <ul>
+            {% for department in departments %}
+            <li>
+                {{ forloop.counter }}.
+                <a href="{% url 'department_detail' department.pk %}" class="dept-name">
+                     {{ department.department_name }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="create">
+            <button onclick=location.href="{% url 'department_create' %}">Add new department</button>
+            <button onclick=location.href="{% url 'employee_create' %}">Add new employee</button>
+        </div>
+    </div>
+</body>
+</html>

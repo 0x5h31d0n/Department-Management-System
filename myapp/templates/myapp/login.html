@@ -1,0 +1,25 @@
+<!-- templates/login.html -->
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/login.css' %}">
+    <title>Login</title>
+</head>
+
+<body>
+    <h2>Login</h2>
+    <img src="{% static 'myapp/icons/lock.png' %}" alt="Icon 1" class="lock-icon">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+    {% if form.errors %}
+    <p class="pass-text">Your username and password didn't match. Please try again.</p>
+    {% endif %}
+</body>
+
+</html>

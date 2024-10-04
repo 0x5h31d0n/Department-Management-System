@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% if form.instance.pk %}Edit Department{% else %}Add Department{% endif %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1 class="top-name"><img src="{% static 'myapp/icons/form.png' %}" alt="Icon 1" class="form-icon">&nbsp;{% if form.instance.pk %}Edit Department{% else %}Add Department{% endif %}</h1>
+    </header>
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">{% if form.instance.pk %}Update{% else %}Create{% endif %}</button>
+        </form>
+        <script type="text/javascript">
+            function goToList() {
+                window.location.href = "{% url 'department_list' %}";
+            }
+        </script>
+        
+        <button onclick="goToList()">Back to list</button>
+    </div>
+</body>
+
+</html>

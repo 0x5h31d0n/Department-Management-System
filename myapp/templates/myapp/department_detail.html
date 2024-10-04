@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Department Detail</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1 class="top-name"><img src="{% static 'myapp/icons/form.png' %}" alt="Icon 1" class="form-icon">&nbsp; Department Detail</h1>
+    </header>
+    <div class="container">
+        <table>
+            <tr>
+                <th>🏬 Department Name</th>
+                <td>{{ department.department_name }}</td>
+            </tr>
+            <tr>
+                <th>🪪 Department ID</th>
+                <td>{{ department.department_id }}</td>
+            </tr>
+            <tr>
+                <th>💰 Salary</th>
+                <td>{{ department.salary }}</td>
+            </tr>
+            <tr>
+                <th>👨🏻 Employees</th>
+                {% for employee in employees %}
+                <tr>
+                    <td>{{ forloop.counter }}. {{ employee.first_name }} {{ employee.last_name }}</td>
+                    <td>{{ employee.email }}</td>
+                    <td>
+                        <button onclick="deleteEmployee('{{ employee.pk }}')" class="warning">Delete</button>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3">No employees in this department.</td>
+                </tr>
+                {% endfor %}
+            </tr>
+        </table>
+        <div class="button-space">
+            <button onclick="editDepartment()">Edit</button>
+            <button onclick="deleteDepartment()" class="warning">Delete Department</button>
+            <button onclick="backToList()">Back to List</button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function editDepartment() {
+            window.location.href = "{% url 'department_update' department.pk %}";
+        }
+
+        function deleteDepartment() {
+            const confirmed = confirm('Are you sure you want to delete this department?');
+            if (confirmed) {
+                window.location.href = "{% url 'department_delete' department.pk %}";
+            }
+        }
+
+        function backToList() {
+            window.location.href = "{% url 'department_list' %}";
+        }
+
+        function deleteEmployee(employeePk) {
+            const confirmed = confirm('Are you sure you want to delete this employee?');
+            if (confirmed) {
+                const url = `{% url 'employee_delete' 0 %}`.replace('0', employeePk);
+                window.location.href = url;
+            }
+        }
+    </script>
+</body>
+
+</html>

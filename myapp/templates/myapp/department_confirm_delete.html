@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Confirm Delete</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1 class="top-name">Confirm Delete</h1>
+    </header>
+    <div class="container">
+        <p>Are you sure you want to delete "{{ department.department_name }}"?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Confirm</button>
+        </form>
+        <button id="cancelButton">Cancel</button>
+    </div>
+    <script>
+        document.getElementById('cancelButton').addEventListener('click', function () {
+            window.location.href = "{% url 'department_detail' department.pk %}";
+        });
+    </script>
+</body>
+</html>
